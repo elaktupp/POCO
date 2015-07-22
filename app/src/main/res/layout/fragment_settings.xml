@@ -1,0 +1,193 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.kimmo.poco.SettingsFragment"
+    android:background="@color/poco_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/mainTitle"
+            android:background="#AA000000"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:src="@drawable/empty_ring"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_title"
+                android:id="@+id/textViewTitle"
+                android:textSize="@dimen/title_text_size"
+                android:textIsSelectable="false"
+                android:textColor="#FFFFFFFF"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/set_interval"
+            android:id="@+id/btnSetInterval"
+            android:onClick="showSetInterval" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_overlay">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/increment"
+                android:id="@+id/btnIncrement"
+                android:layout_weight="1"
+                android:onClick="incrementInterval"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_interval"
+                android:id="@+id/textViewInterval"
+                android:gravity="right"
+                android:layout_marginRight="2dp"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:textColor="#FFFFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seconds"
+                android:id="@+id/textViewUnit"
+                android:gravity="left"
+                android:layout_marginLeft="2dp"
+                android:textSize="16sp"
+                android:layout_marginRight="5dp"
+                android:textColor="#FFFFFFFF" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/decrement"
+                android:id="@+id/btnDecrement"
+                android:layout_weight="1"
+                android:onClick="decrementInterval"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reset_interval"
+            android:id="@+id/btnResetInterval"
+            android:onClick="resetInterval" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTestOutput"
+            android:background="@color/quite_white"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:textColor="#FF000000"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/test_gps"
+                android:id="@+id/btnTestGps"
+                android:layout_weight="4"
+                android:onClick="toggleGPS" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/test_wifi"
+                android:id="@+id/btnTestWifi"
+                android:layout_weight="4"
+                android:onClick="toggleWIFI" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnMain"
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/btn_back"
+                android:onClick="toMain"
+                android:layout_weight="4.75" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:background="#AA000000"
+        android:id="@+id/frameEditText"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <!-- Above the descendantFocusability & focusableInTouchMode are there
+        to keep the EditText from immediately having the focus. -->
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextInterval"
+            android:textColor="#FFFFFFFF"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:gravity="center"
+            android:selectAllOnFocus="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_ok"
+            android:id="@+id/btnAccept"
+            android:layout_below="@+id/editTextInterval"
+            android:layout_alignStart="@+id/editTextInterval"
+            android:onClick="acceptSetInterval" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel"
+            android:id="@+id/btnCancel"
+            android:layout_alignTop="@+id/btnAccept"
+            android:layout_alignEnd="@+id/editTextInterval"
+            android:onClick="hideSetInterval" />
+
+    </RelativeLayout>
+
+</FrameLayout>

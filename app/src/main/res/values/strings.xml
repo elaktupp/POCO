@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">POCO</string>
+    <string name="poco_welcome">
+        Welcome to Pointless Collector!\n\n
+        \tCollecting GPS coordinates of the travelled route and scanning for the WiFis in those stored GPS locations.\n\n
+        \tCollected data is stored to a database for later view. Travelled routes can be viewed on a map.
+    </string>
+    <!-- SETTINGS -->
+    <string name="settings_title">POCO : Settings</string>
+    <string name="seconds">seconds</string>
+    <string name="default_interval">30</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="set_interval">Set Interval</string>
+    <string name="increment">&#43;</string>
+    <string name="decrement">&#45;</string>
+    <string name="reset_interval">Reset Interval</string>
+    <string name="test_gps">Test GPS</string>
+    <string name="test_wifi">Test Wifi</string>
+    <!-- ROUTES -->
+    <string name="database_title">POCO : Database</string>
+    <!-- DATABASE -->
+    <string name="routes_title">POCO : Routes</string>
+    <string name="toggle_gps_on">GPS</string>
+    <string name="toggle_wifi_on">Wifi</string>
+    <string name="toggle_time_on">Time</string>
+    <string name="toggle_gps_off">GPS</string>
+    <string name="toggle_wifi_off">Wifi</string>
+    <string name="toggle_time_off">Time</string>
+    <string name="toggle_distance_off">Dist.</string>
+    <string name="toggle_distance_on">Dist.</string>
+    <string name="toggle_leg_off">Leg</string>
+    <string name="toggle_leg_on">Leg</string>
+    <string name="toggle_altitude_off">Altit.</string>
+    <string name="toggle_altitude_on">Altit.</string>
+    <!-- MAIN -->
+    <string name="main_title">POintless COllector</string>
+</resources>

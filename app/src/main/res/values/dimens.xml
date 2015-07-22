@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_text_size">28sp</dimen>
+
+    <integer name="cmd_to_fragment">0</integer>
+    <integer name="cmd_update_interval">0</integer>
+
+    <integer name="map_width">480</integer>
+    <integer name="map_height">480</integer>
+    <integer name="interval_default">30</integer>
+
+</resources>

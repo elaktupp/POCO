@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/poco_background"
+    android:orientation="horizontal"
+    tools:context="com.example.kimmo.poco.MainFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/scrollerData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fillViewport="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/mainTitle"
+            android:layout_above="@+id/spinnerRoutes"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textViewData"
+                android:background="#FFF0F0F0"
+                android:textColor="#FF000000"
+                android:padding="10dp" />
+
+        </ScrollView>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerRoutes"
+            android:layout_below="@+id/textViewData"
+            android:layout_weight="0"
+            android:background="@color/black_overlay"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/actionButtons"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="0">
+<!--
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleCoords"
+            android:textOn="@string/toggle_gps_on"
+            android:textOff="@string/toggle_gps_off"
+            android:layout_weight="1"/>
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleWifi"
+            android:textOn="@string/toggle_wifi_on"
+            android:textOff="@string/toggle_wifi_off"
+            android:layout_weight="1"/>
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleTime"
+            android:textOn="@string/toggle_time_on"
+            android:textOff="@string/toggle_time_off"
+            android:layout_weight="1"/>
+-->
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleCoords"
+            android:textOn="@string/toggle_gps_on"
+            android:textOff="@string/toggle_gps_off"
+            android:layout_weight="2"
+            android:layout_marginBottom="-4dp" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleWifi"
+            android:textOn="@string/toggle_wifi_on"
+            android:textOff="@string/toggle_wifi_off"
+            android:layout_weight="2"
+            android:layout_marginBottom="-4dp" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleDistance"
+            android:textOff="@string/toggle_distance_off"
+            android:textOn="@string/toggle_distance_on"
+            android:layout_weight="2"
+            android:layout_marginBottom="-4dp" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleLeg"
+            android:layout_weight="2"
+            android:textOff="@string/toggle_leg_off"
+            android:textOn="@string/toggle_leg_on"
+            android:layout_marginBottom="-4dp" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleTime"
+            android:textOn="@string/toggle_time_on"
+            android:textOff="@string/toggle_time_off"
+            android:layout_weight="2"
+            android:layout_marginBottom="-4dp" />
+
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/toggleAltitude"
+            android:layout_weight="2"
+            android:textOff="@string/toggle_altitude_off"
+            android:textOn="@string/toggle_altitude_on"
+            android:layout_marginBottom="-4dp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnMain"
+            android:src="@drawable/btn_back"
+            android:onClick="toMain"
+            android:longClickable="true"
+            android:layout_weight="1.7" />
+
+    </LinearLayout>
+
+</LinearLayout>

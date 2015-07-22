@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:background="@color/poco_background" tools:context="com.example.kimmo.poco.MainFragment">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:id="@+id/mainTitle"
+        android:background="#AA000000"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageViewPoco"
+            android:src="@drawable/empty_ring"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:id="@+id/textViewTitle"
+            android:textSize="@dimen/title_text_size"
+            android:textIsSelectable="false"
+            android:textColor="#FFFFFFFF"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:gravity="center_horizontal|bottom"
+        android:id="@+id/actionButtons"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnData"
+            android:src="@drawable/btn_database"
+            android:onClick="toData"
+            android:longClickable="false"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRoutes"
+            android:src="@drawable/btn_routes"
+            android:onClick="toRoutes"
+            android:longClickable="false"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSettings"
+            android:src="@drawable/btn_settings"
+            android:onClick="toSettings"
+            android:longClickable="false"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStart"
+            android:src="@drawable/btn_start"
+            android:onClick="toStart"
+            android:longClickable="false"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/poco_welcome"
+        android:id="@+id/textViewMain"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/mainTitle"
+        android:layout_above="@+id/actionButtons"
+        android:padding="10dp"
+        android:background="#FFF0F0F0"
+        android:textColor="#FF000000"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp" />
+
+</RelativeLayout>

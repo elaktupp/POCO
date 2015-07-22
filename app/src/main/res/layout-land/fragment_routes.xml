@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/poco_background" tools:context="com.example.kimmo.poco.MainFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webViewRoute"
+            android:background="#FFF0F0F0"
+            android:textColor="#FF000000"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:onClick="showButtons"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:gravity="center_horizontal|bottom"
+            android:id="@+id/actionButtons"
+            android:background="#0099cc"
+            android:layout_weight="0">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spinnerRoutes"
+                android:layout_weight="1"
+                android:background="@color/black_overlay"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/btnRoutes"
+                android:src="@drawable/btn_back"
+                android:onClick="toMain"
+                android:longClickable="true"
+                android:layout_weight="6" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

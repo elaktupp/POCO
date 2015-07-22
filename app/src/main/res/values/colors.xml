@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="poco_background">#FF0099CC</color>
+    <color name="black_overlay">#44000000</color>
+    <color name="white_overlay">#99FFFFFF</color>
+    <color name="quite_white">#FFF0F0F0</color>
+
+</resources>
